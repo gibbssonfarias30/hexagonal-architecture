@@ -41,6 +41,7 @@ public class PersonaJPARepositoryAdapter implements PersonaOut {
     public boolean deletePersona(Long id) {
         if(personaJPARepository.existsById(id)){
             personaJPARepository.deleteById(id);
+            return true;
         }
         return false;
     }
